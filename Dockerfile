@@ -1,5 +1,5 @@
 # parent image
-FROM python:3
+FROM python:3 as py
 LABEL maintainer="National Institute of Standards and Technology"
 
 #copy file from host to current working directory
@@ -16,11 +16,11 @@ RUN mkdir -p ${EXEC_DIR} \
     && mkdir ${DATA_DIR}/outputs
 
 #Run pip install for Hugging Face transformers
-RUN pip3 install transformers[torch] \
-    && pip3 install datasets \ 
-    && pip3 install pillow 
-
+RUN pip3 install datasets  
+RUN pip3 install pillow 
+RUN pip3 install transformers[torch]
 # Inference
+FROM py as inference
 ARG EXEC_DIR="/opt/executable"
 RUN mkdir -p ${DATA_DIR}/inputs ${DATA_DIR}/outputs
 COPY inference.py ${EXEC_DIR}
