@@ -1,4 +1,4 @@
-* HOW TO USE THIS PLUGIN
+# HOW TO USE THIS PLUGIN
 
 Create an image "inference"
 
