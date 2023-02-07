@@ -1,13 +1,13 @@
 {
-    "name": "Timm_Classification",
+    "name": "HF-Classification",
     "version": "0.1.0",
-    "title": "Timm_Classification",
-    "description": "Plugin to load classification models from the Hugging Face Hub using Timm",
+    "title": "HF-Classification",
+    "description": "Plugin to load classification models from the Hugging Face Hub using the transformers API",
     "author": "Berthold Chloé & Cliquot Théo",
     "institution": "ISIMA",
     "repository": "https://github.com/dummer3/PluginHFClassification",
     "website": "",
-    "citation": "Explore and extend models from the latest cutting edge research",
+    "citation": "The AI community building the future",
     "containerId": "",
     "baseCommand": [],
     "inputs": [
@@ -42,13 +42,14 @@
             "key": "inputs.model-path",
             "title": "input-model",
             "description": "Choose your model",
+            "default": "data/inputs",
             "hidden": false
         },
         {
             "key": "inputs.image-folder",
             "title": "image-folder",
             "description": "Image folder",
-            "default": "data/inputs",
+	    "default": "data/outputs/result.csv",
             "hidden": false
         },
         {

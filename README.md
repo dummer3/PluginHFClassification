@@ -1,13 +1,9 @@
-# HOW TO USE THIS PLUGIN
+# Collection of classification plugin for the wipp project
 
-Create an image "inference"
+To see how to use every plugin, please read the README.md in each subfolders.
 
-/bin/bash build-docker.sh 
+Every plugin use models from different hub, you have:
 
-Create the container "inference"
-
-docker run -v /data:/data --name inference inference --model-path nateraw/vit-base-beans --image-folder /data/inputs --output-filepath /data/outputs/result.csv
-
-Before create the container, don't forget to write in the project folder :
-[mv/cp] -r ./data /data 
-(we use a mounted folder data to communicate between the container and the local machine). 
+* HuggingFace with Python_Image and HF_Image, the first start from a python image, and the second from a hugging face image
+* timm
+* pytorchHub
