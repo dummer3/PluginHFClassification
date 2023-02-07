@@ -41,7 +41,7 @@ if __name__=="__main__":
 
     parser.add_argument('--model_path', dest='model_path', type=str,
                         help='Model path to the model to use', required=True)
-    parser.add_argument('--image_folder', dest='image_folder', type=str,
+    parser.add_argument('--imag_efolder', dest='image_folder', type=str,
                         help='filepath to the folder containing tif images to inference (Required)', required=True)
     parser.add_argument('--output_filepath', dest='output_filepath', type=str, required=True)
     parser.add_argument('--image_format', dest='image_format', type=str, help='format (extension) of the input images. E.g {tif, jpg, png)', default='tif')
