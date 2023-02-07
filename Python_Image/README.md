@@ -2,11 +2,11 @@
 
 Create an image "inference"
 
-/bin/bash build-docker.sh 
+`/bin/bash build-docker.sh` 
 
 Create the container "inference"
 
-docker run -v /data:/data --name inference inference --model-path nateraw/vit-base-beans --image-folder /data/inputs --output-filepath /data/outputs/result.csv
+`docker run -v /data:/data --name inference inference --model-path nateraw/vit-base-beans --image-folder /data/inputs --output-filepath /data/outputs/result.csv`
 
 where   model-path is the hugging face hub path of the model you want to use,
 	image-folder the folder containing your inputs 
