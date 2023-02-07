@@ -42,13 +42,13 @@
             "key": "inputs.model-path",
             "title": "input-model",
             "description": "Choose your model",
-            "default": "data/inputs",
             "hidden": false
         },
         {
             "key": "inputs.image-folder",
             "title": "image-folder",
             "description": "Image folder",
+            "default": "data/inputs",
             "hidden": false
         },
         {
