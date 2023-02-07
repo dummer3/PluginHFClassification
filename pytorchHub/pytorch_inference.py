@@ -50,20 +50,19 @@ if __name__ == '__main__':
 
     parser.add_argument('--model-path', dest='model_path', type=str,
                         help='Model path to the model to use', required=True)
-    parser.add_argument('--model-name', dest='model_name', type=str,
-                        help='Model path to the model to use', required=True)
-    parser.add_argument('--images-folder', dest='images_folder', type=str,
+    parser.add_argument('--image-folder', dest='image_folder', type=str,
                         help='filepath to the folder containing tif images to inference (Required)', required=True)
-    parser.add_argument('--csv-file', dest='csv_file', type=str, required=True)
+    parser.add_argument('--output-filepath', dest='output_filepath', type=str, required=True)
     parser.add_argument('--image-format', dest='image_format', type=str, help='format (extension) of the input images. E.g {tif, jpg, png)', default='tif')
 
 
     args = parser.parse_args()
 
-    model_path = args.model_path
-    model_name = args.model_name
-    images_folder = args.images_folder
-    csv_file = args.csv_file
+    model = args.model_path.split("/")
+    model_path = "/".join(model[:-1])
+    model_name = model[-1]
+    image_folder = args.image_folder
+    output_filepath = args.output_filepath
     image_format = args.image_format
 
-    inference(model_path, model_name, images_folder, csv_file, image_format)
+    inference(model_path, model_name, image_folder, output_filepath, image_format)
