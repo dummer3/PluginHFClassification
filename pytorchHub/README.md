@@ -2,6 +2,7 @@
 
 ```/bin/bash build.sh```
 
+
 To run the docker image, the parameters must be --model-path with the path of the model and name as 'path/name', --image-folder which is the path of the folder with the data, --output-filepath which is the csv file in which to write the results, and --image-format.
 
 Example with a model taken from PytorchHub
