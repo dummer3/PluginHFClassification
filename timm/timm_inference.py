@@ -54,9 +54,9 @@ if __name__=="__main__":
     image_format = args.image_format
 
     print('Arguments:')
-    print('model_path = {}'.format(model_path))
-    print('image_folder = {}'.format(image_folder))
-    print('output_filepath = {}'.format(output_filepath))
-    print('image_format = {}'.format(image_format))
+    print('model-path = {}'.format(model_path))
+    print('image-folder = {}'.format(image_folder))
+    print('output-filepath = {}'.format(output_filepath))
+    print('image-format = {}'.format(image_format))
 
     inference(model_path, image_folder, output_filepath, image_format)
