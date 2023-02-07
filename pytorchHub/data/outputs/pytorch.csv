@@ -1,0 +1,5 @@
+Image,Prediction
+./data/inputs/chien.jpg,162
+./data/inputs/carduelis-tristis.jpg,11
+./data/inputs/oiseau.jpg,12
+./data/inputs/chat_tigre.jpg,281
