@@ -62,7 +62,7 @@ if __name__ == '__main__':
     model_path = "/".join(model[:-1])
     model_name = model[-1]
     image_folder = args.image_folder
-    output_filepath = args.output_filepath
+    output_filepath = os.path.join(args.output_filepath, "results.csv")
     image_format = args.image_format
 
     inference(model_path, model_name, image_folder, output_filepath, image_format)
