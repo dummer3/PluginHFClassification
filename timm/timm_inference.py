@@ -50,7 +50,7 @@ if __name__=="__main__":
 
     model_path = args.model_path
     image_folder = args.image_folder
-    output_filepath = args.output_filepath
+    output_filepath = os.path.join(args.output_filepath, "results.csv")
     image_format = args.image_format
 
     print('Arguments:')
